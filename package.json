@@ -1,13 +1,18 @@
 {
   "name": "skillupstand-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "main-server",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChanchalCS1090/skillupstand-server.git"
+  },
+  "author": "Chanchal Kumar Mishra",
   "license": "ISC",
+  "homepage": "https://github.com/ChanchalCS1090/skillupstand-server#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
