@@ -3,43 +3,22 @@
 <section id="hero">
   <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg);">
+      <% for(var i = 0; i < events.length; i++) { %>
+      <%  if(i === 0)  {%>
+      <div class="carousel-item active" style="background-image: url('<%= events[i].image %>');">
+        <% } else { %>
+          <div class="carousel-item" style="background-image: url('<%= events[i].image %>');">
+            <% } %>
         <div class="carousel-container">
           <div class="carousel-content animate__animated animate__fadeInUp">
-            <h2 class="text-center">Introduction to webdesign</h5>
-              <p class="font-italic text-center">Sunday, September 26th at 7:00 pm</p>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat</p>
-              <div class="text-center"><a href="events.html" class="btn-get-started">Read More</a></div>
+            <h2 class="text-center"><%= events[i].heading %></h5>
+              <p class="font-italic text-center"><%= events[i].date %></p>
+              <p class="card-text"><%= events[i].description %></p>
+              <div class="text-center"><a href="<%= events_button_route %>" class="btn-get-started">Read More</a></div>
           </div>
         </div>
       </div>
-      <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg);">
-        <div class="carousel-container">
-          <div class="carousel-content animate__animated animate__fadeInUp">
-            <h2 class="text-center">Marketing Strategies</h5>
-              <p class="font-italic text-center">Sunday, November 15th at 7:00 pm</p>
-              <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium,
-                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
-                sunt explicabo</p>
-              <div class="text-center"><a href="events.html" class="btn-get-started">Read More</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
-        <div class="carousel-container">
-          <div class="carousel-content animate__animated animate__fadeInUp">
-            <h2 class="text-center">Personality Development</h2>
-            <p class="font-italic text-center">Sunday, November 15th at 7:00 pm</p>
-            <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam.
-              Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus
-              deleniti vel. Minus et tempore modi architecto.</p>
-            <div class="text-center"><a href="events.html" class="btn-get-started">Read More</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <% } %>
     <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -68,7 +47,7 @@
             skillupstand is the community for all the passionate people who want to improve their skill,
             where you can showcase your creativity and learn with your peers.
           </p>
-          <a href="about.html" class="learn-more-btn">Learn More</a>
+          <a href="<%= about_button_route %>" class="learn-more-btn">Learn More</a>
         </div>
       </div>
     </div>

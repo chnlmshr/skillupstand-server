@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Skillupstand - Index</title>
+    <title><%= title %></title>
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
     <link href="assets/img/logo4.png" rel="icon">
@@ -22,22 +21,19 @@
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
-
 <body>
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
-            <a href="index.html" class="logo mr-auto"><img src="assets\img\logo4.png" class="img-fluid"></a>
+            <a href="../" class="logo mr-auto"><img src="assets\img\logo4.png" class="img-fluid"></a>
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="<%= home_button_class %>"><a href="<%= home_button_route %>">Home</a></li>
+                    <li class="<%= about_button_class %>"><a href="<%= about_button_route %>">About</a></li>
+                    <li class="<%= events_button_class %>"><a href="<%= events_button_route %>">Events</a></li>
+                    <li class="<%= contact_button_class %>"><a href="<%= contact_button_route %>">Contact</a></li>
                 </ul>
             </nav>
-            <a href="courses.html" class="get-started-btn">Get Started</a>
         </div>
     </header>
 </body>
-
 </html>
